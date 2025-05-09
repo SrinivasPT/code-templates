@@ -1,4 +1,4 @@
-package com.edge.template.config;
+package com.edge.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -2,7 +2,6 @@ package com.edge.template.util;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
@@ -16,11 +15,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 /**
  * Interceptor that logs HTTP requests and adds request context to the MDC.
  * Updated to support distributed tracing across application layers.
+ * 
+ * Supports receiving trace IDs from Angular clients via the X-Trace-ID header,
+ * which enables end-to-end tracing across the full stack.
  */
 @Component
 public class RequestLoggingInterceptor implements HandlerInterceptor {
@@ -30,30 +31,31 @@ public class RequestLoggingInterceptor implements HandlerInterceptor {
     private static final String[] INTERESTING_HEADERS = {
             "User-Agent", "Referer", "X-Forwarded-For", "X-Real-IP", 
             "Origin", "Accept", "Accept-Language", "Content-Type"
-    };
-
-    @Override
+    };    @Override
     public boolean preHandle(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response, @NonNull Object handler) throws Exception {
         // Store request start time for performance tracking
         request.setAttribute(REQUEST_START_TIME, System.currentTimeMillis());
-        
-        // Generate a unique ID for this request
-        String requestId = UUID.randomUUID().toString();
-        MDC.put("requestId", requestId);
         
         // Add the authenticated user ID if available from Spring Security
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String userId = (auth != null && auth.isAuthenticated()) ? auth.getName() : "anonymous";
         MDC.put("userId", userId);
         
-        // Initialize trace context for distributed tracing
-        TraceContext.initTrace(userId);
-        TraceContext.startSpan("Controller");
+        // Check if client sent a trace ID in the header
+        String clientTraceId = request.getHeader(TraceContext.TRACE_ID_HEADER);
         
-        // Capture session ID if available
-        HttpSession session = request.getSession(false);
-        String sessionId = session != null ? session.getId() : "no-session";
-        MDC.put("sessionId", sessionId);
+        // Initialize trace context for distributed tracing, using the client's trace ID if available
+        TraceContext.initTrace(userId, clientTraceId);
+        TraceContext.startSpan("Controller");
+          // Log whether we're using a client-provided trace ID
+        if (clientTraceId != null && !clientTraceId.trim().isEmpty()) {
+            logger.debug("Using client-provided trace ID: {}", clientTraceId);
+        }
+        
+        // Extract PingFederate session reference or token identifier (if available)
+        // This maintains correlation without using HttpSession
+        String pingFedSessionRef = extractPingFedSessionReference(request);
+        MDC.put("sessionRef", pingFedSessionRef);
         
         // Capture client information
         String userAgent = request.getHeader("User-Agent");
@@ -66,14 +68,14 @@ public class RequestLoggingInterceptor implements HandlerInterceptor {
         // Log the beginning of the request with detailed information
         Map<String, String> headerMap = extractInterestingHeaders(request);
         
-        logger.info("Received request: {} {} | Client: {} | IP: {} | Forwarded: {} | User: {} | Session: {} | Headers: {} | TraceId: {}", 
+        logger.info("Received request: {} {} | Client: {} | IP: {} | Forwarded: {} | User: {} | SessionRef: {} | Headers: {} | TraceId: {}", 
                 request.getMethod(), 
                 request.getRequestURI(),
                 userAgent != null ? userAgent : "unknown",
                 clientIp,
                 forwardedFor != null ? forwardedFor : "none",
                 userId,
-                sessionId,
+                pingFedSessionRef,
                 headerMap,
                 TraceContext.getTraceId());
         
@@ -170,5 +172,28 @@ public class RequestLoggingInterceptor implements HandlerInterceptor {
         }
         
         return headerMap;
+    }
+    
+    /**
+     * Extracts PingFederate session reference from request headers
+     * Looks for standard headers used by PingFederate for session tracking
+     */
+    private String extractPingFedSessionReference(HttpServletRequest request) {
+        // Try to get PingFederate session reference from common header locations
+        String sessionRef = request.getHeader("pingfed-session-ref");
+        if (sessionRef == null || sessionRef.isEmpty()) {
+            sessionRef = request.getHeader("X-PingFed-SessionRef");
+        }
+        if (sessionRef == null || sessionRef.isEmpty()) {
+            // Extract from Authorization Bearer token if present (JWT might contain session info)
+            String authHeader = request.getHeader("Authorization");
+            if (authHeader != null && authHeader.startsWith("Bearer ")) {
+                // In a real implementation, you might decode the JWT and extract a session identifier
+                // This is a simplified placeholder
+                sessionRef = "token-ref-" + authHeader.hashCode();
+            }
+        }
+        
+        return sessionRef != null ? sessionRef : "no-session-ref";
     }
 }

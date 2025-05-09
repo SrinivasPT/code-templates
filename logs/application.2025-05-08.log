@@ -1,0 +1,739 @@
+2025-05-08 07:32:26.563 [main] INFO  c.edge.template.TemplateApplication [requestId=,userId=] - Starting TemplateApplication using Java 17.0.14 with PID 30736 (C:\shared\github\srinivaspt\code-templates\build\classes\java\main started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-08 07:32:26.565 [main] INFO  c.edge.template.TemplateApplication [requestId=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 07:32:26.963 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [requestId=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08 07:32:26.980 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [requestId=,userId=] - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2025-05-08 07:32:27.345 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [requestId=,userId=] - Tomcat initialized with port 8080 (http)
+2025-05-08 07:32:27.352 [main] INFO  o.a.coyote.http11.Http11NioProtocol [requestId=,userId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-08 07:32:27.355 [main] INFO  o.a.catalina.core.StandardService [requestId=,userId=] - Starting service [Tomcat]
+2025-05-08 07:32:27.355 [main] INFO  o.a.catalina.core.StandardEngine [requestId=,userId=] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08 07:32:27.409 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [requestId=,userId=] - Initializing Spring embedded WebApplicationContext
+2025-05-08 07:32:27.409 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [requestId=,userId=] - Root WebApplicationContext: initialization completed in 813 ms
+2025-05-08 07:32:27.770 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [requestId=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08 07:32:27.794 [main] INFO  com.zaxxer.hikari.HikariDataSource [requestId=,userId=] - HikariPool-1 - Starting...
+2025-05-08 07:32:29.025 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper [requestId=,userId=] - SQL Error: 1045, SQLState: 28000
+2025-05-08 07:32:29.027 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper [requestId=,userId=] - Access denied for user 'root'@'localhost' (using password: YES)
+2025-05-08 07:32:29.027 [main] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator [requestId=,userId=] - HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.edge.template.TemplateApplication.main(TemplateApplication.java:10)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 35 common frames omitted
+2025-05-08 07:32:29.044 [main] WARN  org.hibernate.orm.deprecation [requestId=,userId=] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08 07:32:29.044 [main] WARN  org.hibernate.orm.deprecation [requestId=,userId=] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-08 07:32:29.273 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [requestId=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 07:32:29.298 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [requestId=,userId=] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-08 07:32:29.537 [main] INFO  o.a.coyote.http11.Http11NioProtocol [requestId=,userId=] - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-08 07:32:29.551 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [requestId=,userId=] - Tomcat started on port 8080 (http) with context path '/'
+2025-05-08 07:32:29.557 [main] INFO  c.edge.template.TemplateApplication [requestId=,userId=] - Started TemplateApplication in 3.378 seconds (process running for 3.621)
+2025-05-08 07:33:15.607 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [requestId=,userId=] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08 07:33:15.607 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [requestId=,userId=] - Initializing Servlet 'dispatcherServlet'
+2025-05-08 07:33:15.608 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [requestId=,userId=] - Completed initialization in 1 ms
+2025-05-08 07:33:15.622 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=bf3da79d-a3e2-4596-8915-d89907a9666a,userId=anonymous] - Received request: GET /api/heartbeat from 0:0:0:0:0:0:0:1
+2025-05-08 07:33:15.656 [http-nio-8080-exec-1] INFO  c.e.t.controller.HeartbeatController [requestId=bf3da79d-a3e2-4596-8915-d89907a9666a,userId=anonymous] - Heartbeat check requested at 2025-05-08T07:33:15.656720500
+2025-05-08 07:33:15.687 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=bf3da79d-a3e2-4596-8915-d89907a9666a,userId=anonymous] - Request completed: GET /api/heartbeat with status 200
+2025-05-08 07:41:41.128 [main] INFO  c.edge.template.TemplateApplication [requestId=,userId=] - Starting TemplateApplication using Java 17.0.14 with PID 32324 (C:\shared\github\srinivaspt\code-templates\build\classes\java\main started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-08 07:41:41.130 [main] INFO  c.edge.template.TemplateApplication [requestId=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 07:41:41.594 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [requestId=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08 07:41:41.611 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [requestId=,userId=] - Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2025-05-08 07:41:42.018 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [requestId=,userId=] - Tomcat initialized with port 8080 (http)
+2025-05-08 07:41:42.031 [main] INFO  o.a.coyote.http11.Http11NioProtocol [requestId=,userId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-08 07:41:42.033 [main] INFO  o.a.catalina.core.StandardService [requestId=,userId=] - Starting service [Tomcat]
+2025-05-08 07:41:42.033 [main] INFO  o.a.catalina.core.StandardEngine [requestId=,userId=] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08 07:41:42.075 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [requestId=,userId=] - Initializing Spring embedded WebApplicationContext
+2025-05-08 07:41:42.075 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [requestId=,userId=] - Root WebApplicationContext: initialization completed in 913 ms
+2025-05-08 07:41:42.442 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [requestId=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08 07:41:42.466 [main] INFO  com.zaxxer.hikari.HikariDataSource [requestId=,userId=] - HikariPool-1 - Starting...
+2025-05-08 07:41:43.702 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper [requestId=,userId=] - SQL Error: 1045, SQLState: 28000
+2025-05-08 07:41:43.702 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper [requestId=,userId=] - Access denied for user 'root'@'localhost' (using password: YES)
+2025-05-08 07:41:43.703 [main] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator [requestId=,userId=] - HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.edge.template.TemplateApplication.main(TemplateApplication.java:10)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 35 common frames omitted
+2025-05-08 07:41:43.719 [main] WARN  org.hibernate.orm.deprecation [requestId=,userId=] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08 07:41:43.720 [main] WARN  org.hibernate.orm.deprecation [requestId=,userId=] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-08 07:41:43.950 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [requestId=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 07:41:43.980 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [requestId=,userId=] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-08 07:41:44.126 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [requestId=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-08 07:41:44.445 [main] INFO  o.a.coyote.http11.Http11NioProtocol [requestId=,userId=] - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-08 07:41:44.458 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [requestId=,userId=] - Tomcat started on port 8080 (http) with context path '/'
+2025-05-08 07:41:44.464 [main] INFO  c.edge.template.TemplateApplication [requestId=,userId=] - Started TemplateApplication in 3.743 seconds (process running for 3.998)
+2025-05-08 07:41:48.457 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [requestId=,userId=] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08 07:41:48.457 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [requestId=,userId=] - Initializing Servlet 'dispatcherServlet'
+2025-05-08 07:41:48.458 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [requestId=,userId=] - Completed initialization in 1 ms
+2025-05-08 07:41:48.480 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=f5bf33d1-db41-4814-a83a-1f4d573c5f60,userId=anonymousUser] - Received request: GET /api/heartbeat from 0:0:0:0:0:0:0:1 by user anonymousUser
+2025-05-08 07:41:48.513 [http-nio-8080-exec-1] INFO  c.e.t.controller.HeartbeatController [requestId=f5bf33d1-db41-4814-a83a-1f4d573c5f60,userId=anonymousUser] - Heartbeat check requested at 2025-05-08T07:41:48.513195800
+2025-05-08 07:41:48.541 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=f5bf33d1-db41-4814-a83a-1f4d573c5f60,userId=anonymousUser] - Request completed: GET /api/heartbeat with status 200
+2025-05-08 07:42:15.969 [http-nio-8080-exec-6] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=85a913f1-5dd3-4228-a2ab-e18b5cd7b1d3,userId=user] - Received request: GET /api/secure/user-info from 0:0:0:0:0:0:0:1 by user user
+2025-05-08 07:42:15.969 [http-nio-8080-exec-6] INFO  c.e.t.controller.SecuredController [requestId=85a913f1-5dd3-4228-a2ab-e18b5cd7b1d3,userId=user] - User info requested by user
+2025-05-08 07:42:15.991 [http-nio-8080-exec-6] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=85a913f1-5dd3-4228-a2ab-e18b5cd7b1d3,userId=user] - Request completed: GET /api/secure/user-info with status 200
+2025-05-08 07:42:56.899 [http-nio-8080-exec-7] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=a6e28ac6-de52-4795-877f-6127e8f08c05,userId=user] - Received request: GET /error from 0:0:0:0:0:0:0:1 by user user
+2025-05-08 07:42:56.910 [http-nio-8080-exec-7] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=a6e28ac6-de52-4795-877f-6127e8f08c05,userId=user] - Request completed: GET /error with status 403
+2025-05-08 07:43:17.927 [http-nio-8080-exec-10] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=226ec938-ed97-4eb5-8b3c-6689392b6218,userId=user] - Received request: GET /error from 0:0:0:0:0:0:0:1 by user user
+2025-05-08 07:43:17.929 [http-nio-8080-exec-10] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=226ec938-ed97-4eb5-8b3c-6689392b6218,userId=user] - Request completed: GET /error with status 403
+2025-05-08 07:43:42.448 [http-nio-8080-exec-9] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=3dede6aa-65f4-4d6d-a011-079fadb62103,userId=user] - Received request: GET /error from 0:0:0:0:0:0:0:1 by user user
+2025-05-08 07:43:42.450 [http-nio-8080-exec-9] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=3dede6aa-65f4-4d6d-a011-079fadb62103,userId=user] - Request completed: GET /error with status 403
+2025-05-08 07:43:51.811 [http-nio-8080-exec-8] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=37f8a98c-58c8-4539-af2f-680955e1a92a,userId=user] - Received request: GET /error from 0:0:0:0:0:0:0:1 by user user
+2025-05-08 07:43:51.813 [http-nio-8080-exec-8] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=37f8a98c-58c8-4539-af2f-680955e1a92a,userId=user] - Request completed: GET /error with status 403
+2025-05-08 07:43:53.007 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=ddee100d-5e5b-4d6b-a9c4-8324e416fb9d,userId=user] - Received request: GET /error from 0:0:0:0:0:0:0:1 by user user
+2025-05-08 07:43:53.009 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=ddee100d-5e5b-4d6b-a9c4-8324e416fb9d,userId=user] - Request completed: GET /error with status 403
+2025-05-08 07:44:12.695 [http-nio-8080-exec-3] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=4b87db0b-134b-4863-8fe7-a12652c0831f,userId=user] - Received request: GET /api/secure/user-info from 0:0:0:0:0:0:0:1 by user user
+2025-05-08 07:44:12.697 [http-nio-8080-exec-3] INFO  c.e.t.controller.SecuredController [requestId=4b87db0b-134b-4863-8fe7-a12652c0831f,userId=user] - User info requested by user
+2025-05-08 07:44:12.698 [http-nio-8080-exec-3] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=4b87db0b-134b-4863-8fe7-a12652c0831f,userId=user] - Request completed: GET /api/secure/user-info with status 200
+2025-05-08 07:57:30.858 [main] INFO  c.edge.template.TemplateApplication [requestId=,userId=] - Starting TemplateApplication using Java 17.0.14 with PID 30172 (C:\shared\github\srinivaspt\code-templates\build\classes\java\main started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-08 07:57:30.859 [main] INFO  c.edge.template.TemplateApplication [requestId=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 07:57:31.294 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [requestId=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08 07:57:31.310 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [requestId=,userId=] - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2025-05-08 07:57:31.698 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [requestId=,userId=] - Tomcat initialized with port 8080 (http)
+2025-05-08 07:57:31.713 [main] INFO  o.a.coyote.http11.Http11NioProtocol [requestId=,userId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-08 07:57:31.715 [main] INFO  o.a.catalina.core.StandardService [requestId=,userId=] - Starting service [Tomcat]
+2025-05-08 07:57:31.715 [main] INFO  o.a.catalina.core.StandardEngine [requestId=,userId=] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08 07:57:31.762 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [requestId=,userId=] - Initializing Spring embedded WebApplicationContext
+2025-05-08 07:57:31.762 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [requestId=,userId=] - Root WebApplicationContext: initialization completed in 872 ms
+2025-05-08 07:57:32.127 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [requestId=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08 07:57:32.149 [main] INFO  com.zaxxer.hikari.HikariDataSource [requestId=,userId=] - HikariPool-1 - Starting...
+2025-05-08 07:57:33.380 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper [requestId=,userId=] - SQL Error: 1045, SQLState: 28000
+2025-05-08 07:57:33.380 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper [requestId=,userId=] - Access denied for user 'root'@'localhost' (using password: YES)
+2025-05-08 07:57:33.381 [main] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator [requestId=,userId=] - HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.edge.template.TemplateApplication.main(TemplateApplication.java:10)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 35 common frames omitted
+2025-05-08 07:57:33.397 [main] WARN  org.hibernate.orm.deprecation [requestId=,userId=] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08 07:57:33.397 [main] WARN  org.hibernate.orm.deprecation [requestId=,userId=] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-08 07:57:33.632 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [requestId=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 07:57:33.664 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [requestId=,userId=] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-08 07:57:33.808 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [requestId=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-08 07:57:34.133 [main] INFO  o.a.coyote.http11.Http11NioProtocol [requestId=,userId=] - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-08 07:57:34.146 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [requestId=,userId=] - Tomcat started on port 8080 (http) with context path '/'
+2025-05-08 07:57:34.152 [main] INFO  c.edge.template.TemplateApplication [requestId=,userId=] - Started TemplateApplication in 3.689 seconds (process running for 3.921)
+2025-05-08 07:57:46.403 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [requestId=,userId=] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08 07:57:46.403 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [requestId=,userId=] - Initializing Servlet 'dispatcherServlet'
+2025-05-08 07:57:46.403 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [requestId=,userId=] - Completed initialization in 0 ms
+2025-05-08 07:57:58.773 [http-nio-8080-exec-3] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=bf9b52fd-50a5-479e-afa9-d98acb3c91c7,userId=user] - Received request: GET /api/secure/user-info | Client: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: 3760F7FD6DD5594DA3F39B133A4C3AE4 | Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36, Accept-Language=en-US,en;q=0.7}
+2025-05-08 07:57:58.807 [http-nio-8080-exec-3] INFO  c.e.t.controller.SecuredController [requestId=bf9b52fd-50a5-479e-afa9-d98acb3c91c7,userId=user] - User info requested by user
+2025-05-08 07:57:58.856 [http-nio-8080-exec-3] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=bf9b52fd-50a5-479e-afa9-d98acb3c91c7,userId=user] - Request completed: GET /api/secure/user-info | Status: 200 | Time: 83ms
+2025-05-08 08:00:58.781 [http-nio-8080-exec-7] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=7ef6af14-4059-4ece-9a19-365dc3274506,userId=user] - Received request: GET /api/heartbeat | Client: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: 3760F7FD6DD5594DA3F39B133A4C3AE4 | Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36, Accept-Language=en-US,en;q=0.7}
+2025-05-08 08:00:58.783 [http-nio-8080-exec-7] INFO  c.e.t.controller.HeartbeatController [requestId=7ef6af14-4059-4ece-9a19-365dc3274506,userId=user] - Heartbeat check requested at 2025-05-08T08:00:58.783049200
+2025-05-08 08:00:58.784 [http-nio-8080-exec-7] INFO  c.e.t.util.RequestLoggingInterceptor [requestId=7ef6af14-4059-4ece-9a19-365dc3274506,userId=user] - Request completed: GET /api/heartbeat | Status: 200 | Time: 3ms
+2025-05-08 08:18:54.095 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - Starting TemplateApplication using Java 17.0.14 with PID 21356 (C:\shared\github\srinivaspt\code-templates\build\classes\java\main started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-08 08:18:54.097 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 08:18:54.540 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08 08:18:54.556 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2025-05-08 08:18:55.092 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,requestId=,userId=] - Tomcat initialized with port 8080 (http)
+2025-05-08 08:18:55.100 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,requestId=,userId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-08 08:18:55.102 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,requestId=,userId=] - Starting service [Tomcat]
+2025-05-08 08:18:55.102 [main] INFO  o.a.catalina.core.StandardEngine [traceId=,spanId=,component=,requestId=,userId=] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08 08:18:55.145 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,requestId=,userId=] - Initializing Spring embedded WebApplicationContext
+2025-05-08 08:18:55.145 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [traceId=,spanId=,component=,requestId=,userId=] - Root WebApplicationContext: initialization completed in 1017 ms
+2025-05-08 08:18:55.531 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [traceId=,spanId=,component=,requestId=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08 08:18:55.554 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Starting...
+2025-05-08 08:18:56.778 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper [traceId=,spanId=,component=,requestId=,userId=] - SQL Error: 1045, SQLState: 28000
+2025-05-08 08:18:56.778 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper [traceId=,spanId=,component=,requestId=,userId=] - Access denied for user 'root'@'localhost' (using password: YES)
+2025-05-08 08:18:56.779 [main] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator [traceId=,spanId=,component=,requestId=,userId=] - HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.edge.template.TemplateApplication.main(TemplateApplication.java:10)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 35 common frames omitted
+2025-05-08 08:18:56.794 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08 08:18:56.795 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-08 08:18:57.029 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,requestId=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 08:18:57.071 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [traceId=,spanId=,component=,requestId=,userId=] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-08 08:18:57.222 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,requestId=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-08 08:18:57.649 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,requestId=,userId=] - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-08 08:18:57.662 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,requestId=,userId=] - Tomcat started on port 8080 (http) with context path '/'
+2025-05-08 08:18:57.668 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - Started TemplateApplication in 3.966 seconds (process running for 4.218)
+2025-05-08 08:19:06.209 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,requestId=,userId=] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08 08:19:06.209 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [traceId=,spanId=,component=,requestId=,userId=] - Initializing Servlet 'dispatcherServlet'
+2025-05-08 08:19:06.210 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [traceId=,spanId=,component=,requestId=,userId=] - Completed initialization in 1 ms
+2025-05-08 08:19:06.231 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=94e977e1-88f1-407d-899d-ef951fee02c0,spanId=af5d2b5d,component=Controller,requestId=051b5c4b-829a-4bba-b698-15a5844b25b1,userId=anonymousUser] - Received request: GET /api/heartbeat | Client: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: anonymousUser | Session: no-session | Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36, Accept-Language=en-US,en;q=0.7} | TraceId: 94e977e1-88f1-407d-899d-ef951fee02c0
+2025-05-08 08:19:06.265 [http-nio-8080-exec-1] INFO  c.e.t.controller.HeartbeatController [traceId=94e977e1-88f1-407d-899d-ef951fee02c0,spanId=af5d2b5d,component=Controller,requestId=051b5c4b-829a-4bba-b698-15a5844b25b1,userId=anonymousUser] - Heartbeat check requested at 2025-05-08T08:19:06.265703
+2025-05-08 08:19:06.294 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=94e977e1-88f1-407d-899d-ef951fee02c0,spanId=af5d2b5d,component=Controller,requestId=051b5c4b-829a-4bba-b698-15a5844b25b1,userId=anonymousUser] - Request completed: GET /api/heartbeat | Status: 200 | Time: 65ms | TraceId: 94e977e1-88f1-407d-899d-ef951fee02c0
+2025-05-08 08:20:41.924 [http-nio-8080-exec-7] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=15281687-f94f-4007-8b17-6e837ce5bae4,spanId=9bdc3949,component=Controller,requestId=72f672a8-559a-418b-bf03-4eecac9a8a2b,userId=user] - Received request: GET /api/secure/user-info | Client: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: 40D1A02469720B0EE8AFB4220690C557 | Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36, Accept-Language=en-US,en;q=0.7} | TraceId: 15281687-f94f-4007-8b17-6e837ce5bae4
+2025-05-08 08:20:41.924 [http-nio-8080-exec-7] INFO  c.e.t.controller.SecuredController [traceId=15281687-f94f-4007-8b17-6e837ce5bae4,spanId=9bdc3949,component=Controller,requestId=72f672a8-559a-418b-bf03-4eecac9a8a2b,userId=user] - User info requested by user | TraceId: 15281687-f94f-4007-8b17-6e837ce5bae4
+2025-05-08 08:20:41.947 [http-nio-8080-exec-7] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=15281687-f94f-4007-8b17-6e837ce5bae4,spanId=9bdc3949,component=Controller,requestId=72f672a8-559a-418b-bf03-4eecac9a8a2b,userId=user] - Request completed: GET /api/secure/user-info | Status: 200 | Time: 24ms | TraceId: 15281687-f94f-4007-8b17-6e837ce5bae4
+2025-05-08 09:40:13.488 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - Starting TemplateApplication using Java 17.0.14 with PID 4020 (C:\shared\github\srinivaspt\code-templates\build\classes\java\main started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-08 09:40:13.490 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 09:40:13.924 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08 09:40:13.941 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2025-05-08 09:40:14.343 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,requestId=,userId=] - Tomcat initialized with port 8080 (http)
+2025-05-08 09:40:14.353 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,requestId=,userId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-08 09:40:14.355 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,requestId=,userId=] - Starting service [Tomcat]
+2025-05-08 09:40:14.355 [main] INFO  o.a.catalina.core.StandardEngine [traceId=,spanId=,component=,requestId=,userId=] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08 09:40:14.391 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,requestId=,userId=] - Initializing Spring embedded WebApplicationContext
+2025-05-08 09:40:14.391 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [traceId=,spanId=,component=,requestId=,userId=] - Root WebApplicationContext: initialization completed in 871 ms
+2025-05-08 09:40:14.806 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [traceId=,spanId=,component=,requestId=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08 09:40:14.829 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Starting...
+2025-05-08 09:40:16.060 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper [traceId=,spanId=,component=,requestId=,userId=] - SQL Error: 1045, SQLState: 28000
+2025-05-08 09:40:16.061 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper [traceId=,spanId=,component=,requestId=,userId=] - Access denied for user 'root'@'localhost' (using password: YES)
+2025-05-08 09:40:16.061 [main] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator [traceId=,spanId=,component=,requestId=,userId=] - HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.edge.template.TemplateApplication.main(TemplateApplication.java:10)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 35 common frames omitted
+2025-05-08 09:40:16.079 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08 09:40:16.081 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-08 09:40:16.358 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,requestId=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 09:40:16.396 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [traceId=,spanId=,component=,requestId=,userId=] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-08 09:40:16.588 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,requestId=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-08 09:40:17.183 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,requestId=,userId=] - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-08 09:40:17.212 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,requestId=,userId=] - Tomcat started on port 8080 (http) with context path '/'
+2025-05-08 09:40:17.220 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - Started TemplateApplication in 4.131 seconds (process running for 4.367)
+2025-05-08 09:41:32.732 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,requestId=,userId=] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08 09:41:32.732 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet [traceId=,spanId=,component=,requestId=,userId=] - Initializing Servlet 'dispatcherServlet'
+2025-05-08 09:41:32.733 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet [traceId=,spanId=,component=,requestId=,userId=] - Completed initialization in 1 ms
+2025-05-08 09:41:32.756 [http-nio-8080-exec-2] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=f4109760-39b5-4d59-a2f4-7bbd6b0784e1,spanId=8c883ba2,component=Controller,requestId=63c71d5b-4f83-45de-99f1-879a06f96704,userId=anonymousUser] - Received request: GET /api/heartbeat | Client: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: anonymousUser | Session: no-session | Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36, Accept-Language=en-US,en;q=0.7} | TraceId: f4109760-39b5-4d59-a2f4-7bbd6b0784e1
+2025-05-08 09:41:32.791 [http-nio-8080-exec-2] INFO  c.e.t.controller.HeartbeatController [traceId=f4109760-39b5-4d59-a2f4-7bbd6b0784e1,spanId=8c883ba2,component=Controller,requestId=63c71d5b-4f83-45de-99f1-879a06f96704,userId=anonymousUser] - Heartbeat check requested at 2025-05-08T09:41:32.791685
+2025-05-08 09:41:32.792 [http-nio-8080-exec-2] INFO  c.e.t.service.HeartbeatService [traceId=f4109760-39b5-4d59-a2f4-7bbd6b0784e1,spanId=8c883ba2,component=Controller,requestId=63c71d5b-4f83-45de-99f1-879a06f96704,userId=anonymousUser] - Heartbeat status is UP
+2025-05-08 09:41:32.825 [http-nio-8080-exec-2] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=f4109760-39b5-4d59-a2f4-7bbd6b0784e1,spanId=8c883ba2,component=Controller,requestId=63c71d5b-4f83-45de-99f1-879a06f96704,userId=anonymousUser] - Request completed: GET /api/heartbeat | Status: 200 | Time: 71ms | TraceId: f4109760-39b5-4d59-a2f4-7bbd6b0784e1
+2025-05-08 09:41:53.713 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=bdc65561-38f0-4324-8dcf-af75e01d60ac,spanId=38503db1,component=Controller,requestId=bfe9732a-d120-4de8-9d11-e169af2db931,userId=anonymousUser] - Received request: GET /api/heartbeat | Client: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: anonymousUser | Session: no-session | Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36, Accept-Language=en-US,en;q=0.7} | TraceId: bdc65561-38f0-4324-8dcf-af75e01d60ac
+2025-05-08 09:41:53.713 [http-nio-8080-exec-1] INFO  c.e.t.controller.HeartbeatController [traceId=bdc65561-38f0-4324-8dcf-af75e01d60ac,spanId=38503db1,component=Controller,requestId=bfe9732a-d120-4de8-9d11-e169af2db931,userId=anonymousUser] - Heartbeat check requested at 2025-05-08T09:41:53.713713
+2025-05-08 09:41:53.713 [http-nio-8080-exec-1] INFO  c.e.t.service.HeartbeatService [traceId=bdc65561-38f0-4324-8dcf-af75e01d60ac,spanId=38503db1,component=Controller,requestId=bfe9732a-d120-4de8-9d11-e169af2db931,userId=anonymousUser] - Heartbeat status is UP
+2025-05-08 09:41:53.714 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=bdc65561-38f0-4324-8dcf-af75e01d60ac,spanId=38503db1,component=Controller,requestId=bfe9732a-d120-4de8-9d11-e169af2db931,userId=anonymousUser] - Request completed: GET /api/heartbeat | Status: 200 | Time: 1ms | TraceId: bdc65561-38f0-4324-8dcf-af75e01d60ac
+2025-05-08 21:57:31.269 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - Starting TemplateApplication using Java 17.0.14 with PID 22056 (C:\shared\github\srinivaspt\code-templates\build\classes\java\main started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-08 21:57:31.271 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 21:57:31.769 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08 21:57:31.796 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2025-05-08 21:57:32.193 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,requestId=,userId=] - Tomcat initialized with port 8080 (http)
+2025-05-08 21:57:32.201 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,requestId=,userId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-08 21:57:32.203 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,requestId=,userId=] - Starting service [Tomcat]
+2025-05-08 21:57:32.203 [main] INFO  o.a.catalina.core.StandardEngine [traceId=,spanId=,component=,requestId=,userId=] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08 21:57:32.261 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,requestId=,userId=] - Initializing Spring embedded WebApplicationContext
+2025-05-08 21:57:32.261 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [traceId=,spanId=,component=,requestId=,userId=] - Root WebApplicationContext: initialization completed in 959 ms
+2025-05-08 21:57:32.658 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [traceId=,spanId=,component=,requestId=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08 21:57:32.681 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Starting...
+2025-05-08 21:57:32.891 [main] INFO  com.zaxxer.hikari.pool.HikariPool [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14dbfdb1
+2025-05-08 21:57:32.892 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Start completed.
+2025-05-08 21:57:32.925 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08 21:57:32.926 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-08 21:57:33.176 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,requestId=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 21:57:33.208 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [traceId=,spanId=,component=,requestId=,userId=] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-08 21:57:33.356 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,requestId=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-08 21:57:33.686 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,requestId=,userId=] - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-08 21:57:33.700 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,requestId=,userId=] - Tomcat started on port 8080 (http) with context path '/'
+2025-05-08 21:57:33.706 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - Started TemplateApplication in 2.826 seconds (process running for 3.059)
+2025-05-08 22:07:42.842 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - Starting TemplateApplication using Java 17.0.14 with PID 2892 (C:\shared\github\srinivaspt\code-templates\build\classes\java\main started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-08 22:07:42.845 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 22:07:43.332 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08 22:07:43.352 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2025-05-08 22:07:43.759 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,requestId=,userId=] - Tomcat initialized with port 8080 (http)
+2025-05-08 22:07:43.767 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,requestId=,userId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-08 22:07:43.769 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,requestId=,userId=] - Starting service [Tomcat]
+2025-05-08 22:07:43.769 [main] INFO  o.a.catalina.core.StandardEngine [traceId=,spanId=,component=,requestId=,userId=] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08 22:07:43.818 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,requestId=,userId=] - Initializing Spring embedded WebApplicationContext
+2025-05-08 22:07:43.818 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [traceId=,spanId=,component=,requestId=,userId=] - Root WebApplicationContext: initialization completed in 941 ms
+2025-05-08 22:07:44.195 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [traceId=,spanId=,component=,requestId=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08 22:07:44.218 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Starting...
+2025-05-08 22:07:44.429 [main] INFO  com.zaxxer.hikari.pool.HikariPool [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@246de37e
+2025-05-08 22:07:44.431 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Start completed.
+2025-05-08 22:07:44.463 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08 22:07:44.464 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-08 22:07:44.715 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,requestId=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 22:07:44.747 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [traceId=,spanId=,component=,requestId=,userId=] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-08 22:07:44.895 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,requestId=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-08 22:07:45.231 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,requestId=,userId=] - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-08 22:07:45.245 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,requestId=,userId=] - Tomcat started on port 8080 (http) with context path '/'
+2025-05-08 22:07:45.251 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - Started TemplateApplication in 2.832 seconds (process running for 3.073)
+2025-05-08 22:07:53.054 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,requestId=,userId=] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08 22:07:53.054 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [traceId=,spanId=,component=,requestId=,userId=] - Initializing Servlet 'dispatcherServlet'
+2025-05-08 22:07:53.055 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [traceId=,spanId=,component=,requestId=,userId=] - Completed initialization in 1 ms
+2025-05-08 22:08:16.617 [http-nio-8080-exec-3] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=ed30c413-467c-4b7f-8840-544bac2408be,spanId=ecccc879,component=Controller,requestId=60cba4d2-a602-45ff-b911-00f7e14fb2b6,userId=user] - Received request: POST /api/products | Client: PostmanRuntime/7.43.2 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: 0FC4F986D7DEE20DDA157B9FFFC94911 | Headers: {Accept=*/*, User-Agent=PostmanRuntime/7.43.2} | TraceId: ed30c413-467c-4b7f-8840-544bac2408be
+2025-05-08 22:08:16.661 [http-nio-8080-exec-3] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=ed30c413-467c-4b7f-8840-544bac2408be,spanId=ecccc879,component=Controller,requestId=60cba4d2-a602-45ff-b911-00f7e14fb2b6,userId=user] - Request completed: POST /api/products | Status: 404 | Time: 45ms | TraceId: ed30c413-467c-4b7f-8840-544bac2408be
+2025-05-08 22:08:16.663 [http-nio-8080-exec-3] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=84080f40-a9a1-4001-854c-0f348c80facb,spanId=89230349,component=Controller,requestId=a8b17f76-9cf7-4eef-852a-f5b0dd580b1c,userId=user] - Received request: POST /error | Client: PostmanRuntime/7.43.2 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: 0FC4F986D7DEE20DDA157B9FFFC94911 | Headers: {Accept=*/*, User-Agent=PostmanRuntime/7.43.2} | TraceId: 84080f40-a9a1-4001-854c-0f348c80facb
+2025-05-08 22:08:16.722 [http-nio-8080-exec-3] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=84080f40-a9a1-4001-854c-0f348c80facb,spanId=89230349,component=Controller,requestId=a8b17f76-9cf7-4eef-852a-f5b0dd580b1c,userId=user] - Request completed: POST /error | Status: 404 | Time: 59ms | TraceId: 84080f40-a9a1-4001-854c-0f348c80facb
+2025-05-08 22:08:55.847 [http-nio-8080-exec-4] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=a912e901-9382-4f07-95d4-c1beedf216f4,spanId=4dfa5a52,component=Controller,requestId=a456216c-bb52-4808-8711-6ec49ecdc3ce,userId=user] - Received request: POST /api/products | Client: PostmanRuntime/7.43.2 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: 0FC4F986D7DEE20DDA157B9FFFC94911 | Headers: {Accept=*/*, User-Agent=PostmanRuntime/7.43.2, Content-Type=application/json} | TraceId: a912e901-9382-4f07-95d4-c1beedf216f4
+2025-05-08 22:08:55.852 [http-nio-8080-exec-4] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=a912e901-9382-4f07-95d4-c1beedf216f4,spanId=4dfa5a52,component=Controller,requestId=a456216c-bb52-4808-8711-6ec49ecdc3ce,userId=user] - Request completed: POST /api/products | Status: 404 | Time: 5ms | TraceId: a912e901-9382-4f07-95d4-c1beedf216f4
+2025-05-08 22:08:55.854 [http-nio-8080-exec-4] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=6f8ea0ff-78b0-4da7-9922-8246f710761b,spanId=0a07e0f9,component=Controller,requestId=48817e4c-d0bb-4ffe-be72-73027c16dc04,userId=user] - Received request: POST /error | Client: PostmanRuntime/7.43.2 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: 0FC4F986D7DEE20DDA157B9FFFC94911 | Headers: {Accept=*/*, User-Agent=PostmanRuntime/7.43.2, Content-Type=application/json} | TraceId: 6f8ea0ff-78b0-4da7-9922-8246f710761b
+2025-05-08 22:08:55.855 [http-nio-8080-exec-4] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=6f8ea0ff-78b0-4da7-9922-8246f710761b,spanId=0a07e0f9,component=Controller,requestId=48817e4c-d0bb-4ffe-be72-73027c16dc04,userId=user] - Request completed: POST /error | Status: 404 | Time: 2ms | TraceId: 6f8ea0ff-78b0-4da7-9922-8246f710761b
+2025-05-08 22:09:11.403 [http-nio-8080-exec-5] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=06e6bbad-6557-4904-a082-7a0c92f6c1db,spanId=5f3d248a,component=Controller,requestId=a97ea982-cca5-4aa2-9627-8dcc062017fc,userId=user] - Received request: POST /api/products | Client: PostmanRuntime/7.43.2 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: 0FC4F986D7DEE20DDA157B9FFFC94911 | Headers: {Accept=*/*, User-Agent=PostmanRuntime/7.43.2, Content-Type=application/json} | TraceId: 06e6bbad-6557-4904-a082-7a0c92f6c1db
+2025-05-08 22:09:11.404 [http-nio-8080-exec-5] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=06e6bbad-6557-4904-a082-7a0c92f6c1db,spanId=5f3d248a,component=Controller,requestId=a97ea982-cca5-4aa2-9627-8dcc062017fc,userId=user] - Request completed: POST /api/products | Status: 404 | Time: 1ms | TraceId: 06e6bbad-6557-4904-a082-7a0c92f6c1db
+2025-05-08 22:09:11.405 [http-nio-8080-exec-5] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=bbafcd3f-8c19-448b-b7b2-e035594ad77e,spanId=d2f3ef95,component=Controller,requestId=47377832-5c68-4a71-9bb2-d7808735e656,userId=user] - Received request: POST /error | Client: PostmanRuntime/7.43.2 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: 0FC4F986D7DEE20DDA157B9FFFC94911 | Headers: {Accept=*/*, User-Agent=PostmanRuntime/7.43.2, Content-Type=application/json} | TraceId: bbafcd3f-8c19-448b-b7b2-e035594ad77e
+2025-05-08 22:09:11.406 [http-nio-8080-exec-5] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=bbafcd3f-8c19-448b-b7b2-e035594ad77e,spanId=d2f3ef95,component=Controller,requestId=47377832-5c68-4a71-9bb2-d7808735e656,userId=user] - Request completed: POST /error | Status: 404 | Time: 1ms | TraceId: bbafcd3f-8c19-448b-b7b2-e035594ad77e
+2025-05-08 22:10:09.284 [http-nio-8080-exec-6] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=6502f61d-8a84-4524-8484-41f6fceb126a,spanId=85df5ee4,component=Controller,requestId=b5660ba5-283b-4838-9c28-f64dea0c7453,userId=user] - Received request: POST /api/products | Client: PostmanRuntime/7.43.2 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: 0FC4F986D7DEE20DDA157B9FFFC94911 | Headers: {Accept=*/*, User-Agent=PostmanRuntime/7.43.2, Content-Type=application/json} | TraceId: 6502f61d-8a84-4524-8484-41f6fceb126a
+2025-05-08 22:10:09.285 [http-nio-8080-exec-6] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=6502f61d-8a84-4524-8484-41f6fceb126a,spanId=85df5ee4,component=Controller,requestId=b5660ba5-283b-4838-9c28-f64dea0c7453,userId=user] - Request completed: POST /api/products | Status: 404 | Time: 1ms | TraceId: 6502f61d-8a84-4524-8484-41f6fceb126a
+2025-05-08 22:10:09.286 [http-nio-8080-exec-6] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=e3cf9643-6b76-4c17-be3d-98c5a08ed35e,spanId=290df011,component=Controller,requestId=416896d8-0a3d-4ccb-984d-cdfc940a24b3,userId=user] - Received request: POST /error | Client: PostmanRuntime/7.43.2 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: 0FC4F986D7DEE20DDA157B9FFFC94911 | Headers: {Accept=*/*, User-Agent=PostmanRuntime/7.43.2, Content-Type=application/json} | TraceId: e3cf9643-6b76-4c17-be3d-98c5a08ed35e
+2025-05-08 22:10:09.287 [http-nio-8080-exec-6] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=e3cf9643-6b76-4c17-be3d-98c5a08ed35e,spanId=290df011,component=Controller,requestId=416896d8-0a3d-4ccb-984d-cdfc940a24b3,userId=user] - Request completed: POST /error | Status: 404 | Time: 1ms | TraceId: e3cf9643-6b76-4c17-be3d-98c5a08ed35e
+2025-05-08 22:10:52.652 [http-nio-8080-exec-7] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=ed848973-ac4b-45dc-855a-0910c48ad9c9,spanId=10d189cb,component=Controller,requestId=ba58eabc-6ef7-4b98-919c-1ac11debb5ee,userId=user] - Received request: POST /api/products | Client: PostmanRuntime/7.43.2 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: 0FC4F986D7DEE20DDA157B9FFFC94911 | Headers: {Accept=*/*, User-Agent=PostmanRuntime/7.43.2, Content-Type=application/json} | TraceId: ed848973-ac4b-45dc-855a-0910c48ad9c9
+2025-05-08 22:10:52.653 [http-nio-8080-exec-7] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=ed848973-ac4b-45dc-855a-0910c48ad9c9,spanId=10d189cb,component=Controller,requestId=ba58eabc-6ef7-4b98-919c-1ac11debb5ee,userId=user] - Request completed: POST /api/products | Status: 404 | Time: 1ms | TraceId: ed848973-ac4b-45dc-855a-0910c48ad9c9
+2025-05-08 22:10:52.654 [http-nio-8080-exec-7] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=467f9002-ffd6-4187-aa4f-ccaa063f7da2,spanId=37981029,component=Controller,requestId=fb56c7c7-7e6e-4049-90ab-2d93a2b8bb7e,userId=user] - Received request: POST /error | Client: PostmanRuntime/7.43.2 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: 0FC4F986D7DEE20DDA157B9FFFC94911 | Headers: {Accept=*/*, User-Agent=PostmanRuntime/7.43.2, Content-Type=application/json} | TraceId: 467f9002-ffd6-4187-aa4f-ccaa063f7da2
+2025-05-08 22:10:52.655 [http-nio-8080-exec-7] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=467f9002-ffd6-4187-aa4f-ccaa063f7da2,spanId=37981029,component=Controller,requestId=fb56c7c7-7e6e-4049-90ab-2d93a2b8bb7e,userId=user] - Request completed: POST /error | Status: 404 | Time: 1ms | TraceId: 467f9002-ffd6-4187-aa4f-ccaa063f7da2
+2025-05-08 22:16:00.956 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - Starting TemplateApplication using Java 17.0.14 with PID 9124 (C:\shared\github\srinivaspt\code-templates\build\classes\java\main started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-08 22:16:00.958 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 22:16:01.430 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08 22:16:01.450 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2025-05-08 22:16:01.838 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,requestId=,userId=] - Tomcat initialized with port 8080 (http)
+2025-05-08 22:16:01.846 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,requestId=,userId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-08 22:16:01.847 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,requestId=,userId=] - Starting service [Tomcat]
+2025-05-08 22:16:01.847 [main] INFO  o.a.catalina.core.StandardEngine [traceId=,spanId=,component=,requestId=,userId=] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08 22:16:01.896 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,requestId=,userId=] - Initializing Spring embedded WebApplicationContext
+2025-05-08 22:16:01.896 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [traceId=,spanId=,component=,requestId=,userId=] - Root WebApplicationContext: initialization completed in 907 ms
+2025-05-08 22:16:02.253 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [traceId=,spanId=,component=,requestId=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08 22:16:02.277 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Starting...
+2025-05-08 22:16:02.510 [main] INFO  com.zaxxer.hikari.pool.HikariPool [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ac417a2
+2025-05-08 22:16:02.513 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Start completed.
+2025-05-08 22:16:02.542 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08 22:16:02.543 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-08 22:16:02.787 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,requestId=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 22:16:02.818 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [traceId=,spanId=,component=,requestId=,userId=] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-08 22:16:02.960 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,requestId=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-08 22:16:03.315 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,requestId=,userId=] - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-08 22:16:03.330 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,requestId=,userId=] - Tomcat started on port 8080 (http) with context path '/'
+2025-05-08 22:16:03.338 [main] INFO  c.edge.template.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - Started TemplateApplication in 2.761 seconds (process running for 2.985)
+2025-05-08 22:16:14.364 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,requestId=,userId=] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08 22:16:14.365 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [traceId=,spanId=,component=,requestId=,userId=] - Initializing Servlet 'dispatcherServlet'
+2025-05-08 22:16:14.365 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [traceId=,spanId=,component=,requestId=,userId=] - Completed initialization in 0 ms
+2025-05-08 22:16:14.508 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=470ae9c5-8b83-460b-872b-dc88008c5da5,spanId=bc65df5d,component=Controller,requestId=ae1cb9d5-3b58-45b0-86c5-5ce86e7f180b,userId=user] - Received request: POST /api/products | Client: PostmanRuntime/7.43.2 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: no-session | Headers: {Accept=*/*, User-Agent=PostmanRuntime/7.43.2, Content-Type=application/json} | TraceId: 470ae9c5-8b83-460b-872b-dc88008c5da5
+2025-05-08 22:16:14.541 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=470ae9c5-8b83-460b-872b-dc88008c5da5,spanId=bc65df5d,component=Controller,requestId=ae1cb9d5-3b58-45b0-86c5-5ce86e7f180b,userId=user] - Request completed: POST /api/products | Status: 404 | Time: 35ms | TraceId: 470ae9c5-8b83-460b-872b-dc88008c5da5
+2025-05-08 22:16:14.546 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=0f4b61b1-4fd8-4f31-a9be-d32c32bb1c19,spanId=4cd74fdb,component=Controller,requestId=bad0f7e0-d872-4818-8f77-cea688a60a4e,userId=user] - Received request: POST /error | Client: PostmanRuntime/7.43.2 | IP: 0:0:0:0:0:0:0:1 | Forwarded: none | User: user | Session: no-session | Headers: {Accept=*/*, User-Agent=PostmanRuntime/7.43.2, Content-Type=application/json} | TraceId: 0f4b61b1-4fd8-4f31-a9be-d32c32bb1c19
+2025-05-08 22:16:14.595 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=0f4b61b1-4fd8-4f31-a9be-d32c32bb1c19,spanId=4cd74fdb,component=Controller,requestId=bad0f7e0-d872-4818-8f77-cea688a60a4e,userId=user] - Request completed: POST /error | Status: 404 | Time: 49ms | TraceId: 0f4b61b1-4fd8-4f31-a9be-d32c32bb1c19
+2025-05-08 22:18:39.259 [main] INFO  com.edge.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - Starting TemplateApplication using Java 17.0.14 with PID 23468 (C:\shared\github\srinivaspt\code-templates\build\classes\java\main started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-08 22:18:39.261 [main] INFO  com.edge.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 22:18:39.724 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08 22:18:39.779 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2025-05-08 22:18:40.164 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,requestId=,userId=] - Tomcat initialized with port 8080 (http)
+2025-05-08 22:18:40.182 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,requestId=,userId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-08 22:18:40.183 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,requestId=,userId=] - Starting service [Tomcat]
+2025-05-08 22:18:40.183 [main] INFO  o.a.catalina.core.StandardEngine [traceId=,spanId=,component=,requestId=,userId=] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08 22:18:40.224 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,requestId=,userId=] - Initializing Spring embedded WebApplicationContext
+2025-05-08 22:18:40.224 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [traceId=,spanId=,component=,requestId=,userId=] - Root WebApplicationContext: initialization completed in 931 ms
+2025-05-08 22:18:40.585 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [traceId=,spanId=,component=,requestId=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08 22:18:40.607 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Starting...
+2025-05-08 22:18:40.830 [main] INFO  com.zaxxer.hikari.pool.HikariPool [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ea3a513
+2025-05-08 22:18:40.831 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Start completed.
+2025-05-08 22:18:40.862 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08 22:18:40.862 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-08 22:18:41.659 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,requestId=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 22:18:41.668 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [traceId=,spanId=,component=,requestId=,userId=] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController' defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\application\controller\ProductController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productService' defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\application\service\ProductService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.edge.product.domain.repository.ProductRepositoryAdapter' available: expected single matching bean but found 2: productRepositoryAdapter,productRepositoryImpl
+2025-05-08 22:18:41.668 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,requestId=,userId=] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 22:18:41.670 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Shutdown initiated...
+2025-05-08 22:18:41.675 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Shutdown completed.
+2025-05-08 22:18:41.677 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,requestId=,userId=] - Stopping service [Tomcat]
+2025-05-08 22:18:41.685 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger [traceId=,spanId=,component=,requestId=,userId=] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-08 22:18:41.703 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter [traceId=,spanId=,component=,requestId=,userId=] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.edge.product.application.service.ProductService required a single bean, but 2 were found:
+	- productRepositoryAdapter: defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\domain\repository\ProductRepositoryAdapter.class]
+	- productRepositoryImpl: defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\infrastructure\persistence\ProductRepositoryImpl.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention)
+
+
+2025-05-08 22:21:38.510 [main] INFO  com.edge.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - Starting TemplateApplication using Java 17.0.14 with PID 5596 (C:\shared\github\srinivaspt\code-templates\build\classes\java\main started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-08 22:21:38.512 [main] INFO  com.edge.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 22:21:39.051 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08 22:21:39.105 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
+2025-05-08 22:21:39.536 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,requestId=,userId=] - Tomcat initialized with port 8080 (http)
+2025-05-08 22:21:39.544 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,requestId=,userId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-08 22:21:39.546 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,requestId=,userId=] - Starting service [Tomcat]
+2025-05-08 22:21:39.547 [main] INFO  o.a.catalina.core.StandardEngine [traceId=,spanId=,component=,requestId=,userId=] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08 22:21:39.593 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,requestId=,userId=] - Initializing Spring embedded WebApplicationContext
+2025-05-08 22:21:39.593 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [traceId=,spanId=,component=,requestId=,userId=] - Root WebApplicationContext: initialization completed in 1051 ms
+2025-05-08 22:21:39.973 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [traceId=,spanId=,component=,requestId=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08 22:21:39.994 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Starting...
+2025-05-08 22:21:40.193 [main] INFO  com.zaxxer.hikari.pool.HikariPool [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18b04526
+2025-05-08 22:21:40.194 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Start completed.
+2025-05-08 22:21:40.224 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08 22:21:40.225 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-08 22:21:40.926 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,requestId=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 22:21:40.939 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [traceId=,spanId=,component=,requestId=,userId=] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController' defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\application\controller\ProductController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productService' defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\application\service\ProductService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productRepositoryImpl' defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\infrastructure\persistence\ProductRepositoryImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productRepositoryImpl': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+2025-05-08 22:21:40.939 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,requestId=,userId=] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 22:21:40.941 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Shutdown initiated...
+2025-05-08 22:21:40.946 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Shutdown completed.
+2025-05-08 22:21:40.947 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,requestId=,userId=] - Stopping service [Tomcat]
+2025-05-08 22:21:40.955 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger [traceId=,spanId=,component=,requestId=,userId=] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-08 22:21:40.968 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter [traceId=,spanId=,component=,requestId=,userId=] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   productController defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\application\controller\ProductController.class]
+      ?
+   productService defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\application\service\ProductService.class]
+???????
+|  productRepositoryImpl defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\infrastructure\persistence\ProductRepositoryImpl.class]
+???????
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-05-08 22:24:14.399 [main] INFO  com.edge.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - Starting TemplateApplication using Java 17.0.14 with PID 23944 (C:\shared\github\srinivaspt\code-templates\build\classes\java\main started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-08 22:24:14.401 [main] INFO  com.edge.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 22:24:14.876 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08 22:24:14.939 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2025-05-08 22:24:15.328 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,requestId=,userId=] - Tomcat initialized with port 8080 (http)
+2025-05-08 22:24:15.336 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,requestId=,userId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-08 22:24:15.338 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,requestId=,userId=] - Starting service [Tomcat]
+2025-05-08 22:24:15.338 [main] INFO  o.a.catalina.core.StandardEngine [traceId=,spanId=,component=,requestId=,userId=] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08 22:24:15.380 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,requestId=,userId=] - Initializing Spring embedded WebApplicationContext
+2025-05-08 22:24:15.381 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [traceId=,spanId=,component=,requestId=,userId=] - Root WebApplicationContext: initialization completed in 950 ms
+2025-05-08 22:24:15.739 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [traceId=,spanId=,component=,requestId=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08 22:24:15.763 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Starting...
+2025-05-08 22:24:15.967 [main] INFO  com.zaxxer.hikari.pool.HikariPool [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3eee08f5
+2025-05-08 22:24:15.968 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Start completed.
+2025-05-08 22:24:15.998 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08 22:24:15.999 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-08 22:24:16.697 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,requestId=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 22:24:16.709 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [traceId=,spanId=,component=,requestId=,userId=] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController' defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\application\controller\ProductController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productService' defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\application\service\ProductService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.edge.product.domain.repository.ProductRepositoryAdapter' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-05-08 22:24:16.710 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,requestId=,userId=] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 22:24:16.712 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Shutdown initiated...
+2025-05-08 22:24:16.717 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Shutdown completed.
+2025-05-08 22:24:16.718 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,requestId=,userId=] - Stopping service [Tomcat]
+2025-05-08 22:24:16.726 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger [traceId=,spanId=,component=,requestId=,userId=] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-08 22:24:16.740 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter [traceId=,spanId=,component=,requestId=,userId=] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.edge.product.application.service.ProductService required a bean of type 'com.edge.product.domain.repository.ProductRepositoryAdapter' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.edge.product.domain.repository.ProductRepositoryAdapter' in your configuration.
+
+2025-05-08 22:26:25.989 [main] INFO  com.edge.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - Starting TemplateApplication using Java 17.0.14 with PID 11600 (C:\shared\github\srinivaspt\code-templates\build\classes\java\main started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-08 22:26:25.991 [main] INFO  com.edge.TemplateApplication [traceId=,spanId=,component=,requestId=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 22:26:26.465 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08 22:26:26.529 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,requestId=,userId=] - Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
+2025-05-08 22:26:26.917 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,requestId=,userId=] - Tomcat initialized with port 8080 (http)
+2025-05-08 22:26:26.925 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,requestId=,userId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-08 22:26:26.926 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,requestId=,userId=] - Starting service [Tomcat]
+2025-05-08 22:26:26.927 [main] INFO  o.a.catalina.core.StandardEngine [traceId=,spanId=,component=,requestId=,userId=] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08 22:26:26.968 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,requestId=,userId=] - Initializing Spring embedded WebApplicationContext
+2025-05-08 22:26:26.968 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [traceId=,spanId=,component=,requestId=,userId=] - Root WebApplicationContext: initialization completed in 947 ms
+2025-05-08 22:26:27.327 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [traceId=,spanId=,component=,requestId=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08 22:26:27.350 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Starting...
+2025-05-08 22:26:27.555 [main] INFO  com.zaxxer.hikari.pool.HikariPool [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56881196
+2025-05-08 22:26:27.556 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Start completed.
+2025-05-08 22:26:27.586 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08 22:26:27.586 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,requestId=,userId=] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-08 22:26:28.273 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,requestId=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 22:26:28.285 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [traceId=,spanId=,component=,requestId=,userId=] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController' defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\application\controller\ProductController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productService' defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\application\service\ProductService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productRepositoryImpl' defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\infrastructure\persistence\ProductRepositoryImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productRepositoryImpl': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+2025-05-08 22:26:28.285 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,requestId=,userId=] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08 22:26:28.288 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Shutdown initiated...
+2025-05-08 22:26:28.293 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,requestId=,userId=] - HikariPool-1 - Shutdown completed.
+2025-05-08 22:26:28.294 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,requestId=,userId=] - Stopping service [Tomcat]
+2025-05-08 22:26:28.302 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger [traceId=,spanId=,component=,requestId=,userId=] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-08 22:26:28.315 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter [traceId=,spanId=,component=,requestId=,userId=] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   productController defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\application\controller\ProductController.class]
+      ?
+   productService defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\application\service\ProductService.class]
+???????
+|  productRepositoryImpl defined in file [C:\shared\github\srinivaspt\code-templates\build\classes\java\main\com\edge\product\infrastructure\persistence\ProductRepositoryImpl.class]
+???????
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+

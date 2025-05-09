@@ -1,4 +1,4 @@
-package com.edge.template.config;
+package com.edge.config;
 
 import com.edge.template.util.RequestLoggingInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;

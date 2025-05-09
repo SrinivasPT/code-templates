@@ -10,10 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/api/products")
 public class ProductController extends GenericCrudController<Product, ProductDTO, ProductDTO, UUID> {
     
     public ProductController(ProductService service) {
         super(service);
     }
+
+    
 }

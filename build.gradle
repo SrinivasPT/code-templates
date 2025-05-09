@@ -39,14 +39,19 @@ dependencies {
 	
 	// MapStruct for object mapping
 	implementation 'org.mapstruct:mapstruct:1.5.5.Final'
-	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+	
+	// Jackson for JSON processing (used by redaction mechanism)
+	implementation 'com.fasterxml.jackson.core:jackson-databind'
 	
 	// H2 database
 	runtimeOnly 'com.h2database:h2:2.2.224'
 	
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.mysql:mysql-connector-j'
+	
+	// Add Lombok first, then MapStruct
 	annotationProcessor 'org.projectlombok:lombok'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
 	
 	// Testing dependencies
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

@@ -1,4 +1,4 @@
-package com.edge.template;
+package com.edge;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

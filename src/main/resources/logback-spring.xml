@@ -1,25 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <!-- Console appender with MDC values including trace info -->
+    <!-- Import Spring properties -->    <springProperty scope="context" name="redactionEnabled" source="logging.redaction.enabled"/>
+    <springProperty scope="context" name="fieldsToRedact" source="logging.redaction.fields"/>
+    <springProperty scope="context" name="fieldTypes" source="logging.redaction.field-types"/>
+    <springProperty scope="context" name="redactionMask" source="logging.redaction.mask-with"/>
+    <springProperty scope="context" name="jsonRedactionEnabled" source="logging.redaction.json-redaction-enabled"/>
+      <!-- Console appender with MDC values including trace info -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} [traceId=%X{traceId},spanId=%X{spanId},component=%X{component},requestId=%X{requestId},userId=%X{userId}] - %msg%n</pattern>
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="com.edge.config.logging.RedactingPatternLayout">
+                <fieldsToRedact>${fieldsToRedact}</fieldsToRedact>
+                <fieldTypes>${fieldTypes}</fieldTypes>
+                <redactionString>${redactionMask}</redactionString>
+                <enableJsonRedaction>${jsonRedactionEnabled}</enableJsonRedaction>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} [traceId=%X{traceId},spanId=%X{spanId},component=%X{component},userId=%X{userId}] - %msg%n</pattern>
+            </layout>
         </encoder>
     </appender>
     
     <!-- File appender with MDC values including trace info -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/application.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+        <file>logs/application.log</file>        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- Daily rollover -->
             <fileNamePattern>logs/application.%d{yyyy-MM-dd}.log</fileNamePattern>
             <!-- Keep 30 days worth of history -->
             <maxHistory>30</maxHistory>
             <!-- Total size cap -->
             <totalSizeCap>3GB</totalSizeCap>
-        </rollingPolicy>
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} [traceId=%X{traceId},spanId=%X{spanId},component=%X{component},requestId=%X{requestId},userId=%X{userId}] - %msg%n</pattern>
+        </rollingPolicy>        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="com.edge.config.logging.RedactingPatternLayout">
+                <fieldsToRedact>${fieldsToRedact}</fieldsToRedact>
+                <fieldTypes>${fieldTypes}</fieldTypes>
+                <redactionString>${redactionMask}</redactionString>
+                <enableJsonRedaction>${jsonRedactionEnabled}</enableJsonRedaction>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} [traceId=%X{traceId},spanId=%X{spanId},component=%X{component},userId=%X{userId}] - %msg%n</pattern>
+            </layout>
         </encoder>
     </appender>
     

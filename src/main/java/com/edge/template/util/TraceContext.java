@@ -7,14 +7,14 @@ import java.util.UUID;
  * Utility class for managing distributed tracing context across application layers.
  * This allows for correlating log messages from controllers through services to repositories.
  */
-public class TraceContext {
-
-    public static final String REQUEST_ID = "requestId";
-    public static final String USER_ID = "userId";
+public class TraceContext {    public static final String USER_ID = "userId";
     public static final String TRACE_ID = "traceId";
     public static final String SPAN_ID = "spanId";
     public static final String PARENT_SPAN_ID = "parentSpanId";
     public static final String COMPONENT = "component";
+    
+    // The HTTP header name that Angular should use to pass the trace ID
+    public static final String TRACE_ID_HEADER = "X-Trace-ID";
 
     /**
      * Initialize a new trace context with a unique trace ID.
@@ -24,7 +24,22 @@ public class TraceContext {
      * @return the generated trace ID
      */
     public static String initTrace(String userId) {
-        String traceId = UUID.randomUUID().toString();
+        return initTrace(userId, null);
+    }
+
+    /**
+     * Initialize a trace context, using the provided trace ID if available,
+     * or generating a new one if not.
+     * 
+     * @param userId the user identifier
+     * @param existingTraceId an existing trace ID from a client request, may be null
+     * @return the trace ID (either the existing one or a newly generated one)
+     */
+    public static String initTrace(String userId, String existingTraceId) {
+        String traceId = (existingTraceId != null && !existingTraceId.trim().isEmpty()) 
+            ? existingTraceId 
+            : UUID.randomUUID().toString();
+            
         String spanId = UUID.randomUUID().toString().substring(0, 8);
         
         MDC.put(TRACE_ID, traceId);

@@ -1,14 +1,17 @@
 package com.edge.product.application.mapper;
 
 import com.edge.product.application.dto.ProductDTO;
+import com.edge.product.application.dto.ProductSpecificationDTO;
 import com.edge.product.domain.entity.Product;
+import com.edge.product.domain.entity.ProductSpecification;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 
 import java.util.UUID;
+import java.util.List;
 
-@Mapper(componentModel = "spring", imports = UUID.class, uses = ProductSpecificationMapper.class)
+@Mapper(componentModel = "spring", imports = UUID.class)
 public interface ProductMapper {
     
     @Mapping(target = "id", expression = "java(dto.getId() == null ? UUID.randomUUID() : dto.getId())")
@@ -16,6 +19,16 @@ public interface ProductMapper {
     
     ProductDTO toDTO(Product entity);
     
-    // New method to update an existing entity
     void updateEntityFromDto(ProductDTO dto, @MappingTarget Product entity);
+    
+    // ProductSpecification mapping methods
+    @Mapping(target = "id", expression = "java(dto.getId() == null ? UUID.randomUUID() : dto.getId())")
+    ProductSpecification toEntity(ProductSpecificationDTO dto);
+    
+    ProductSpecificationDTO toDTO(ProductSpecification entity);
+    
+    // List mapping methods
+    List<ProductSpecification> toEntityList(List<ProductSpecificationDTO> dtoList);
+    
+    List<ProductSpecificationDTO> toDTOList(List<ProductSpecification> entityList);
 }
