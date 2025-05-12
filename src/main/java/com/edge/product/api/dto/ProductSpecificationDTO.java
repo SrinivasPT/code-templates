@@ -1,4 +1,4 @@
-package com.edge.product.application.dto;
+package com.edge.product.api.dto;
 
 import com.edge.product.domain.validation.ProductSpecificationValidations;
 import lombok.AllArgsConstructor;
@@ -14,4 +14,5 @@ public class ProductSpecificationDTO implements ProductSpecificationValidations 
     private UUID id;
     private String name;
     private String value;
+    private Long version;
 }

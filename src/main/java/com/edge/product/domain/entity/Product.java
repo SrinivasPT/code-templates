@@ -25,6 +25,9 @@ public class Product {
     
     private BigDecimal price;
     
+    @Version
+    private Long version;
+
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "product_id")
     private List<ProductSpecification> specifications = new ArrayList<>();

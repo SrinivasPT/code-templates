@@ -3,6 +3,7 @@ package com.edge.product.domain.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Version;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,4 +22,7 @@ public class ProductSpecification {
     private String name;
     
     private String value;
+
+    @Version
+    private Long version;
 }

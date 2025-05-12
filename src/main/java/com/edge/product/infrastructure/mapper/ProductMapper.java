@@ -1,7 +1,7 @@
-package com.edge.product.application.mapper;
+package com.edge.product.infrastructure.mapper;
 
-import com.edge.product.application.dto.ProductDTO;
-import com.edge.product.application.dto.ProductSpecificationDTO;
+import com.edge.product.api.dto.ProductDTO;
+import com.edge.product.api.dto.ProductSpecificationDTO;
 import com.edge.product.domain.entity.Product;
 import com.edge.product.domain.entity.ProductSpecification;
 import org.mapstruct.Mapper;

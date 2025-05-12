@@ -1,6 +1,7 @@
-package com.edge.product.application.controller;
+package com.edge.product.api.controller;
 
-import com.edge.product.application.dto.ProductDTO;
+
+import com.edge.product.api.dto.ProductDTO;
 import com.edge.product.application.service.ProductService;
 import com.edge.product.domain.entity.Product;
 import com.edge.common.GenericCrudController;

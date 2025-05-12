@@ -1,4 +1,4 @@
-package com.edge.product.application.dto;
+package com.edge.product.api.dto;
 
 import com.edge.product.domain.validation.ProductValidations;
 import lombok.AllArgsConstructor;
@@ -18,5 +18,6 @@ public class ProductDTO implements ProductValidations {
     private String name;
     private String description;
     private BigDecimal price;
+    private Long version;
     private List<ProductSpecificationDTO> specifications = new ArrayList<>();
 }
