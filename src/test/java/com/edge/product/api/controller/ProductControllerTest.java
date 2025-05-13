@@ -29,7 +29,7 @@ import static org.mockito.Mockito.*;
 class ProductControllerTest {
     @Autowired
     private MockMvc mockMvc;
-    
+
     @MockitoBean
     private ProductService productService;
 
