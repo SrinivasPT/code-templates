@@ -1,6 +1,7 @@
 package com.edge.common;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import jakarta.validation.Valid;
+import jakarta.validation.groups.Default;
 
 @RestController
 public abstract class GenericCrudController<T, CommandDTO, ResponseDTO, ID> {
@@ -19,12 +20,14 @@ public abstract class GenericCrudController<T, CommandDTO, ResponseDTO, ID> {
     }
 
     @PostMapping
-    public ResponseEntity<ResponseDTO> create(@Valid @RequestBody CommandDTO dto) {
+    public ResponseEntity<ResponseDTO> create(
+            @Validated({ Default.class, ValidationGroup.Create.class }) @RequestBody CommandDTO dto) {
         return ResponseEntity.ok(service.create(dto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ResponseDTO> update(@PathVariable ID id, @Valid @RequestBody CommandDTO dto) {
+    public ResponseEntity<ResponseDTO> update(@PathVariable ID id,
+            @Validated({ Default.class, ValidationGroup.Update.class }) @RequestBody CommandDTO dto) {
         return ResponseEntity.ok(service.update(id, dto));
     }
 
