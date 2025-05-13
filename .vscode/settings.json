@@ -1,0 +1,190 @@
+{
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "cSpell.words": [
+        "Configurer",
+        "dtos",
+        "hamcrest",
+        "jdbc",
+        "logback",
+        "mapstruct",
+        "projectlombok",
+        "springframework"
+    ],
+    "workbench.colorTheme": "Default Dark Modern",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    
+    // Java-specific syntax highlighting customizations (IntelliJ-like)
+    "editor.tokenColorCustomizations": {
+        "[Default Dark Modern]": {
+            "textMateRules": [
+                {
+                    "scope": "comment.line.java",
+                    "settings": {
+                        "foreground": "#808080",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "comment.block.java",
+                    "settings": {
+                        "foreground": "#808080",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "comment.block.javadoc.java",
+                    "settings": {
+                        "foreground": "#629755",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "keyword.control.java",
+                    "settings": {
+                        "foreground": "#CC7832"
+                    }
+                },
+                // Import keyword - orange like other keywords
+                {
+                    "scope": "keyword.other.import.java",
+                    "settings": {
+                        "foreground": "#CC7832",
+                        "fontStyle": "bold"
+                    }
+                },
+                // Import package paths - light blue
+                {
+                    "scope": "storage.type.package.java",
+                    "settings": {
+                        "foreground": "#8FBCBB"
+                    }
+                },
+                // Import packages - neutral blue
+                {
+                    "scope": "support.type.package.java",
+                    "settings": {
+                        "foreground": "#8195A8"
+                    }
+                },
+                // Package name separators (dots)
+                {
+                    "scope": "punctuation.separator.java",
+                    "settings": {
+                        "foreground": "#A9B7C6"
+                    }
+                },
+                // Wildcards in imports (*)
+                {
+                    "scope": "constant.other.wildcard.java",
+                    "settings": {
+                        "foreground": "#CC9393"
+                    }
+                },
+                // Static keyword in imports
+                {
+                    "scope": "keyword.other.static.java",
+                    "settings": {
+                        "foreground": "#CC7832",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "storage.type.java",
+                    "settings": {
+                        "foreground": "#CC7832"
+                    }
+                },
+                {
+                    "scope": "storage.modifier.java",
+                    "settings": {
+                        "foreground": "#CC7832"
+                    }
+                },
+                {
+                    "scope": "constant.language.java",
+                    "settings": {
+                        "foreground": "#9876AA"
+                    }
+                },
+                {
+                    "scope": "entity.name.type.class.java",
+                    "settings": {
+                        "foreground": "#A9B7C6"
+                    }
+                },
+                {
+                    "scope": "entity.name.function.java",
+                    "settings": {
+                        "foreground": "#FFC66D"
+                    }
+                },
+                {
+                    "scope": "string.quoted.double.java",
+                    "settings": {
+                        "foreground": "#6A8759"
+                    }
+                },
+                {
+                    "scope": "string.quoted.single.java",
+                    "settings": {
+                        "foreground": "#6A8759"
+                    }
+                }
+            ]
+        }
+    },
+    
+    // Semantic token customizations (IntelliJ-like)
+    "editor.semanticTokenColorCustomizations": {
+        "[Default Dark Modern]": {
+            "enabled": true,
+            "rules": {
+                "class": {
+                    "foreground": "#bec5ce"
+                },
+                "interface": {
+                    "foreground": "#A9B7C6"
+                },
+                "enum": {
+                    "foreground": "#A9B7C6"
+                },
+                "annotation": {
+                    "foreground": "#d1cb1f"
+                },
+                "method": {
+                    "foreground": "#cca25f"
+                },
+                "type": {
+                    "foreground": "#A9B7C6"
+                },
+                "parameter": {
+                    "foreground": "#A9B7C6"
+                },
+                "property": {
+                    "foreground": "#9876AA"
+                },
+                "variable": {
+                    "foreground": "#A9B7C6"
+                },
+                "variable.readonly": {
+                    "foreground": "#9876AA",
+                    "fontStyle": "bold"
+                },
+                "number": {
+                    "foreground": "#6897BB"
+                },
+                "string": {
+                    "foreground": "#6A8759"
+                },
+                // Namespace customization at the semantic level
+                "namespace": {
+                    "foreground": "#8195A8"
+                }
+            }
+        }
+    },
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": false
+}
