@@ -65,6 +65,11 @@ public abstract class GenericCrudService<T, CommandDTO, ResponseDTO, ID> {
     }
 
     @Transactional(readOnly = true)
+    public Optional<ResponseDTO> findById(ID id) {
+        return get(id);
+    }
+
+    @Transactional(readOnly = true)
     public List<ResponseDTO> findAll() {
         return repository.findAll().stream()
                 .map(mapperFunction)

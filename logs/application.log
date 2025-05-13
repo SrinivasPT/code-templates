@@ -1209,3 +1209,187 @@ org.springframework.web.bind.MethodArgumentNotValidException: Validation failed 
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:840)
 2025-05-13 20:38:01.483 [http-nio-8080-exec-1] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=bfb3830a-4254-4db0-8f85-f8eceac0e7df,spanId=731b5478,component=Controller,userId=user] - Request completed: POST /api/products | Status: 400 | Time: 158ms | TraceId: bfb3830a-4254-4db0-8f85-f8eceac0e7df
+2025-05-13 21:26:20.360 [main] INFO  com.edge.TemplateApplication [traceId=,spanId=,component=,userId=] - Starting TemplateApplication using Java 17.0.14 with PID 10352 (C:\shared\github\srinivaspt\code-templates\build\classes\java\main started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-13 21:26:20.365 [main] INFO  com.edge.TemplateApplication [traceId=,spanId=,component=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:26:20.997 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 21:26:21.059 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,userId=] - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2025-05-13 21:26:21.507 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,userId=] - Tomcat initialized with port 8080 (http)
+2025-05-13 21:26:21.516 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,userId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-13 21:26:21.518 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,userId=] - Starting service [Tomcat]
+2025-05-13 21:26:21.519 [main] INFO  o.a.catalina.core.StandardEngine [traceId=,spanId=,component=,userId=] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-13 21:26:21.574 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,userId=] - Initializing Spring embedded WebApplicationContext
+2025-05-13 21:26:21.575 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [traceId=,spanId=,component=,userId=] - Root WebApplicationContext: initialization completed in 1171 ms
+2025-05-13 21:26:21.998 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [traceId=,spanId=,component=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 21:26:22.024 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,userId=] - HikariPool-1 - Starting...
+2025-05-13 21:26:22.250 [main] INFO  com.zaxxer.hikari.pool.HikariPool [traceId=,spanId=,component=,userId=] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a54c92e
+2025-05-13 21:26:22.251 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,userId=] - HikariPool-1 - Start completed.
+2025-05-13 21:26:22.292 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,userId=] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 21:26:23.154 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:26:23.360 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [traceId=,spanId=,component=,userId=] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 21:26:23.510 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-13 21:26:23.893 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,userId=] - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-13 21:26:23.908 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,userId=] - Tomcat started on port 8080 (http) with context path '/'
+2025-05-13 21:26:23.914 [main] INFO  com.edge.TemplateApplication [traceId=,spanId=,component=,userId=] - Started TemplateApplication in 3.989 seconds (process running for 4.28)
+2025-05-13 21:39:16.266 [main] INFO  com.edge.TemplateApplication [traceId=,spanId=,component=,userId=] - Starting TemplateApplication using Java 17.0.14 with PID 31992 (C:\shared\github\srinivaspt\code-templates\build\classes\java\main started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-13 21:39:16.268 [main] INFO  com.edge.TemplateApplication [traceId=,spanId=,component=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:39:16.855 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 21:39:16.917 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,userId=] - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2025-05-13 21:39:17.338 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,userId=] - Tomcat initialized with port 8080 (http)
+2025-05-13 21:39:17.346 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,userId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-13 21:39:17.348 [main] INFO  o.a.catalina.core.StandardService [traceId=,spanId=,component=,userId=] - Starting service [Tomcat]
+2025-05-13 21:39:17.348 [main] INFO  o.a.catalina.core.StandardEngine [traceId=,spanId=,component=,userId=] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-13 21:39:17.398 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [traceId=,spanId=,component=,userId=] - Initializing Spring embedded WebApplicationContext
+2025-05-13 21:39:17.398 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [traceId=,spanId=,component=,userId=] - Root WebApplicationContext: initialization completed in 1095 ms
+2025-05-13 21:39:17.804 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [traceId=,spanId=,component=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 21:39:17.829 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,userId=] - HikariPool-1 - Starting...
+2025-05-13 21:39:18.044 [main] INFO  com.zaxxer.hikari.pool.HikariPool [traceId=,spanId=,component=,userId=] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31880efa
+2025-05-13 21:39:18.046 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,userId=] - HikariPool-1 - Start completed.
+2025-05-13 21:39:18.085 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,userId=] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 21:39:18.878 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:39:19.097 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [traceId=,spanId=,component=,userId=] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 21:39:19.240 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-13 21:39:19.591 [main] INFO  o.a.coyote.http11.Http11NioProtocol [traceId=,spanId=,component=,userId=] - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-13 21:39:19.604 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [traceId=,spanId=,component=,userId=] - Tomcat started on port 8080 (http) with context path '/'
+2025-05-13 21:39:19.610 [main] INFO  com.edge.TemplateApplication [traceId=,spanId=,component=,userId=] - Started TemplateApplication in 3.764 seconds (process running for 4.043)
+2025-05-13 21:43:23.559 [main] INFO  c.e.t.TemplateApplicationTests [traceId=,spanId=,component=,userId=] - Starting TemplateApplicationTests using Java 17.0.14 with PID 39660 (started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-13 21:43:23.565 [main] INFO  c.e.t.TemplateApplicationTests [traceId=,spanId=,component=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:43:24.715 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 21:43:24.861 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,userId=] - Finished Spring Data repository scanning in 126 ms. Found 1 JPA repository interface.
+2025-05-13 21:43:26.305 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [traceId=,spanId=,component=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 21:43:26.370 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,userId=] - HikariPool-1 - Starting...
+2025-05-13 21:43:26.819 [main] INFO  com.zaxxer.hikari.pool.HikariPool [traceId=,spanId=,component=,userId=] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ec3a4c2
+2025-05-13 21:43:26.824 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,userId=] - HikariPool-1 - Start completed.
+2025-05-13 21:43:26.895 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,userId=] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 21:43:28.509 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:43:28.985 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [traceId=,spanId=,component=,userId=] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 21:43:29.232 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-13 21:43:30.302 [main] INFO  c.e.t.TemplateApplicationTests [traceId=,spanId=,component=,userId=] - Started TemplateApplicationTests in 7.237 seconds (process running for 8.514)
+2025-05-13 21:43:31.677 [main] INFO  c.e.p.a.service.ProductService [traceId=,spanId=,component=,userId=] - beforeCreate called for ProductDTO: ProductDTO(id=null, name=Test Product, description=null, price=100, version=null, specifications=[])
+2025-05-13 21:43:31.700 [main] INFO  c.e.p.a.service.ProductService [traceId=,spanId=,component=,userId=] - afterCreate called for Product: com.edge.product.domain.entity.Product@39b265c9
+2025-05-13 21:43:31.703 [main] INFO  c.e.p.a.service.ProductService [traceId=,spanId=,component=,userId=] - Created entity: com.edge.product.domain.entity.Product@39b265c9
+2025-05-13 21:43:31.775 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils [traceId=,spanId=,component=,userId=] - Could not detect default configuration classes for test class [com.edge.product.api.controller.ProductControllerTest]: ProductControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-05-13 21:43:31.894 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper [traceId=,spanId=,component=,userId=] - Found @SpringBootConfiguration com.edge.TemplateApplication for test class com.edge.product.api.controller.ProductControllerTest
+2025-05-13 21:43:31.986 [main] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - Starting ProductControllerTest using Java 17.0.14 with PID 39660 (started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-13 21:43:31.988 [main] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:43:32.833 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [traceId=,spanId=,component=,userId=] - 
+
+Using generated security password: ********
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-13 21:43:32.856 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-13 21:43:32.969 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext [traceId=,spanId=,component=,userId=] - Initializing Spring TestDispatcherServlet ''
+2025-05-13 21:43:32.972 [main] INFO  o.s.t.w.s.TestDispatcherServlet [traceId=,spanId=,component=,userId=] - Initializing Servlet ''
+2025-05-13 21:43:32.977 [main] INFO  o.s.t.w.s.TestDispatcherServlet [traceId=,spanId=,component=,userId=] - Completed initialization in 0 ms
+2025-05-13 21:43:33.007 [main] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - Started ProductControllerTest in 1.102 seconds (process running for 11.22)
+2025-05-13 21:43:33.169 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,userId=] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:43:33.175 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,userId=] - HikariPool-1 - Shutdown initiated...
+2025-05-13 21:43:33.203 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,userId=] - HikariPool-1 - Shutdown completed.
+2025-05-13 21:48:07.489 [main] INFO  c.e.t.TemplateApplicationTests [traceId=,spanId=,component=,userId=] - Starting TemplateApplicationTests using Java 17.0.14 with PID 4520 (started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-13 21:48:07.493 [main] INFO  c.e.t.TemplateApplicationTests [traceId=,spanId=,component=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:48:08.244 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,userId=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 21:48:08.313 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [traceId=,spanId=,component=,userId=] - Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interface.
+2025-05-13 21:48:09.046 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [traceId=,spanId=,component=,userId=] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 21:48:09.081 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,userId=] - HikariPool-1 - Starting...
+2025-05-13 21:48:09.367 [main] INFO  com.zaxxer.hikari.pool.HikariPool [traceId=,spanId=,component=,userId=] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e592ef2
+2025-05-13 21:48:09.371 [main] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,userId=] - HikariPool-1 - Start completed.
+2025-05-13 21:48:09.419 [main] WARN  org.hibernate.orm.deprecation [traceId=,spanId=,component=,userId=] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 21:48:10.337 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,userId=] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:48:10.721 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [traceId=,spanId=,component=,userId=] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 21:48:10.949 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-13 21:48:11.736 [main] INFO  c.e.t.TemplateApplicationTests [traceId=,spanId=,component=,userId=] - Started TemplateApplicationTests in 4.645 seconds (process running for 7.404)
+2025-05-13 21:48:11.783 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils [traceId=,spanId=,component=,userId=] - Could not detect default configuration classes for test class [com.edge.product.api.controller.ProductControllerTest]: ProductControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-05-13 21:48:11.829 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper [traceId=,spanId=,component=,userId=] - Found @SpringBootConfiguration com.edge.TemplateApplication for test class com.edge.product.api.controller.ProductControllerTest
+2025-05-13 21:48:11.862 [main] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - Starting ProductControllerTest using Java 17.0.14 with PID 4520 (started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-13 21:48:11.863 [main] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:48:12.280 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [traceId=,spanId=,component=,userId=] - 
+
+Using generated security password: ********
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-13 21:48:12.297 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-13 21:48:12.356 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext [traceId=,spanId=,component=,userId=] - Initializing Spring TestDispatcherServlet ''
+2025-05-13 21:48:12.357 [main] INFO  o.s.t.w.s.TestDispatcherServlet [traceId=,spanId=,component=,userId=] - Initializing Servlet ''
+2025-05-13 21:48:12.359 [main] INFO  o.s.t.w.s.TestDispatcherServlet [traceId=,spanId=,component=,userId=] - Completed initialization in 2 ms
+2025-05-13 21:48:12.374 [main] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - Started ProductControllerTest in 0.54 seconds (process running for 8.042)
+2025-05-13 21:48:12.428 [main] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=c55b2494-f268-4706-8df5-b615300dedaf,spanId=71816939,component=Controller,userId=anonymous] - Received request: GET /api/products/5ddaf338-46f5-427c-aa42-1a92607e19d0 | Client: unknown | IP: 127.0.0.1 | Forwarded: none | User: anonymous | SessionRef: no-session-ref | Headers: {} | TraceId: c55b2494-f268-4706-8df5-b615300dedaf
+2025-05-13 21:48:12.519 [main] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=c55b2494-f268-4706-8df5-b615300dedaf,spanId=71816939,component=Controller,userId=anonymous] - Request completed: GET /api/products/5ddaf338-46f5-427c-aa42-1a92607e19d0 | Status: 404 | Time: 92ms | TraceId: c55b2494-f268-4706-8df5-b615300dedaf
+2025-05-13 21:48:12.652 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [traceId=,spanId=,component=,userId=] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 21:48:12.655 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,userId=] - HikariPool-1 - Shutdown initiated...
+2025-05-13 21:48:12.665 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [traceId=,spanId=,component=,userId=] - HikariPool-1 - Shutdown completed.
+2025-05-13 21:49:16.024 [Test worker] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - Starting ProductControllerTest using Java 17.0.14 with PID 13600 (started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-13 21:49:16.029 [Test worker] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:49:18.207 [Test worker] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [traceId=,spanId=,component=,userId=] - 
+
+Using generated security password: ********
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-13 21:49:18.241 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-13 21:49:18.433 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext [traceId=,spanId=,component=,userId=] - Initializing Spring TestDispatcherServlet ''
+2025-05-13 21:49:18.434 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet [traceId=,spanId=,component=,userId=] - Initializing Servlet ''
+2025-05-13 21:49:18.436 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet [traceId=,spanId=,component=,userId=] - Completed initialization in 1 ms
+2025-05-13 21:49:18.477 [Test worker] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - Started ProductControllerTest in 2.891 seconds (process running for 4.151)
+2025-05-13 21:49:18.578 [Test worker] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=8c6f7c6c-33f9-4855-a6fa-721286289507,spanId=eedfb66a,component=Controller,userId=user] - Received request: GET /api/products/eb1729b2-a21e-4bf3-a6c4-6da332e0719e | Client: unknown | IP: 127.0.0.1 | Forwarded: none | User: user | SessionRef: no-session-ref | Headers: {} | TraceId: 8c6f7c6c-33f9-4855-a6fa-721286289507
+2025-05-13 21:49:18.668 [Test worker] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=8c6f7c6c-33f9-4855-a6fa-721286289507,spanId=eedfb66a,component=Controller,userId=user] - Request completed: GET /api/products/eb1729b2-a21e-4bf3-a6c4-6da332e0719e | Status: 404 | Time: 91ms | TraceId: 8c6f7c6c-33f9-4855-a6fa-721286289507
+2025-05-13 21:53:22.442 [main] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - Starting ProductControllerTest using Java 17.0.14 with PID 6564 (started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-13 21:53:22.446 [main] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:53:24.635 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [traceId=,spanId=,component=,userId=] - 
+
+Using generated security password: ********
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-13 21:53:24.668 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-13 21:53:24.861 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext [traceId=,spanId=,component=,userId=] - Initializing Spring TestDispatcherServlet ''
+2025-05-13 21:53:24.862 [main] INFO  o.s.t.w.s.TestDispatcherServlet [traceId=,spanId=,component=,userId=] - Initializing Servlet ''
+2025-05-13 21:53:24.865 [main] INFO  o.s.t.w.s.TestDispatcherServlet [traceId=,spanId=,component=,userId=] - Completed initialization in 2 ms
+2025-05-13 21:53:24.910 [main] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - Started ProductControllerTest in 2.952 seconds (process running for 4.207)
+2025-05-13 21:53:25.006 [main] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=0574cb40-99d9-42b5-995b-903a01d564ab,spanId=76220f67,component=Controller,userId=anonymous] - Received request: GET /api/products/6bb8d90a-4ab2-49b3-b75f-9ef5660fcf24 | Client: unknown | IP: 127.0.0.1 | Forwarded: none | User: anonymous | SessionRef: no-session-ref | Headers: {} | TraceId: 0574cb40-99d9-42b5-995b-903a01d564ab
+2025-05-13 21:53:25.106 [main] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=0574cb40-99d9-42b5-995b-903a01d564ab,spanId=76220f67,component=Controller,userId=anonymous] - Request completed: GET /api/products/6bb8d90a-4ab2-49b3-b75f-9ef5660fcf24 | Status: 404 | Time: 102ms | TraceId: 0574cb40-99d9-42b5-995b-903a01d564ab
+2025-05-13 21:55:47.189 [main] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - Starting ProductControllerTest using Java 17.0.14 with PID 2984 (started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-13 21:55:47.195 [main] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:55:49.331 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [traceId=,spanId=,component=,userId=] - 
+
+Using generated security password: ********
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-13 21:55:49.367 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-13 21:55:49.577 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext [traceId=,spanId=,component=,userId=] - Initializing Spring TestDispatcherServlet ''
+2025-05-13 21:55:49.579 [main] INFO  o.s.t.w.s.TestDispatcherServlet [traceId=,spanId=,component=,userId=] - Initializing Servlet ''
+2025-05-13 21:55:49.581 [main] INFO  o.s.t.w.s.TestDispatcherServlet [traceId=,spanId=,component=,userId=] - Completed initialization in 1 ms
+2025-05-13 21:55:49.626 [main] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - Started ProductControllerTest in 2.941 seconds (process running for 4.422)
+2025-05-13 21:55:49.746 [main] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=65e322c4-9fe7-47fa-9c16-f7a1e69fb23b,spanId=83cbd4dd,component=Controller,userId=user] - Received request: GET /api/products/baba017b-8d65-4478-8424-a2cdd65f9445 | Client: unknown | IP: 127.0.0.1 | Forwarded: none | User: user | SessionRef: no-session-ref | Headers: {} | TraceId: 65e322c4-9fe7-47fa-9c16-f7a1e69fb23b
+2025-05-13 21:55:49.854 [main] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=65e322c4-9fe7-47fa-9c16-f7a1e69fb23b,spanId=83cbd4dd,component=Controller,userId=user] - Request completed: GET /api/products/baba017b-8d65-4478-8424-a2cdd65f9445 | Status: 404 | Time: 108ms | TraceId: 65e322c4-9fe7-47fa-9c16-f7a1e69fb23b
+2025-05-13 21:59:44.138 [Test worker] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - Starting ProductControllerTest using Java 17.0.14 with PID 32648 (started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-13 21:59:44.146 [Test worker] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 21:59:46.469 [Test worker] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [traceId=,spanId=,component=,userId=] - 
+
+Using generated security password: ********
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-13 21:59:46.501 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-13 21:59:46.697 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext [traceId=,spanId=,component=,userId=] - Initializing Spring TestDispatcherServlet ''
+2025-05-13 21:59:46.699 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet [traceId=,spanId=,component=,userId=] - Initializing Servlet ''
+2025-05-13 21:59:46.702 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet [traceId=,spanId=,component=,userId=] - Completed initialization in 3 ms
+2025-05-13 21:59:46.746 [Test worker] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - Started ProductControllerTest in 3.046 seconds (process running for 4.203)
+2025-05-13 21:59:46.843 [Test worker] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=028db76a-3f4f-42dc-a2b4-b315a6b896d9,spanId=5944b7fa,component=Controller,userId=user] - Received request: GET /api/products/b02b486a-5d67-4755-883e-dae23a47bd2a | Client: unknown | IP: 127.0.0.1 | Forwarded: none | User: user | SessionRef: no-session-ref | Headers: {} | TraceId: 028db76a-3f4f-42dc-a2b4-b315a6b896d9
+2025-05-13 21:59:46.940 [Test worker] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=028db76a-3f4f-42dc-a2b4-b315a6b896d9,spanId=5944b7fa,component=Controller,userId=user] - Request completed: GET /api/products/b02b486a-5d67-4755-883e-dae23a47bd2a | Status: 404 | Time: 97ms | TraceId: 028db76a-3f4f-42dc-a2b4-b315a6b896d9
+2025-05-13 22:01:46.568 [Test worker] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - Starting ProductControllerTest using Java 17.0.14 with PID 26308 (started by developer in C:\shared\github\srinivaspt\code-templates)
+2025-05-13 22:01:46.577 [Test worker] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 22:01:48.653 [Test worker] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [traceId=,spanId=,component=,userId=] - 
+
+Using generated security password: ********
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-13 22:01:48.685 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [traceId=,spanId=,component=,userId=] - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-13 22:01:48.880 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext [traceId=,spanId=,component=,userId=] - Initializing Spring TestDispatcherServlet ''
+2025-05-13 22:01:48.882 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet [traceId=,spanId=,component=,userId=] - Initializing Servlet ''
+2025-05-13 22:01:48.885 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet [traceId=,spanId=,component=,userId=] - Completed initialization in 2 ms
+2025-05-13 22:01:48.924 [Test worker] INFO  c.e.p.a.c.ProductControllerTest [traceId=,spanId=,component=,userId=] - Started ProductControllerTest in 2.761 seconds (process running for 4.0)
+2025-05-13 22:01:49.066 [Test worker] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=fa892075-e439-49e6-8f93-3141afefd132,spanId=a6d7b57a,component=Controller,userId=user] - Received request: GET /api/products/b31ef95b-7d5e-49c6-a1f4-53a1e6f56f6c | Client: unknown | IP: 127.0.0.1 | Forwarded: none | User: user | SessionRef: no-session-ref | Headers: {} | TraceId: fa892075-e439-49e6-8f93-3141afefd132
+2025-05-13 22:01:49.197 [Test worker] INFO  c.e.t.util.RequestLoggingInterceptor [traceId=fa892075-e439-49e6-8f93-3141afefd132,spanId=a6d7b57a,component=Controller,userId=user] - Request completed: GET /api/products/b31ef95b-7d5e-49c6-a1f4-53a1e6f56f6c | Status: 200 | Time: 136ms | TraceId: fa892075-e439-49e6-8f93-3141afefd132

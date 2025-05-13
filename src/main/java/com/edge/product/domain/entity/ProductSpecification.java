@@ -9,7 +9,7 @@ import jakarta.persistence.Version;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -24,6 +24,7 @@ import com.edge.common.ValidationGroup;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class ProductSpecification {
     @Id
     private UUID id;
